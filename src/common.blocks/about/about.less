@@ -1,0 +1,41 @@
+@import (reference) './../../less/variables.less';
+
+.about {
+  padding-bottom: 116px;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @media screen and (max-width: 1240px) {
+    padding: 0 120px;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.about__img-container {
+  position: relative;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
+}
+
+.about__img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  background-color: @color-gray-1-70;
+}
+
+.about__logo {
+  width: 659px;
+  height: 76px;
+}

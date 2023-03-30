@@ -1,0 +1,75 @@
+@import (reference) './../../less/variables.less';
+
+.modal-sendrequest {
+  position: relative;
+  max-width: 456px;
+  padding: 36px 32px;
+  background-color: @color-white;
+  border: 0;
+  &::backdrop {
+    background-color: @color-gray-1-70;
+    backdrop-filter: blur(4px);
+  }
+  .subtitle {
+    margin: 24px 0;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-sendrequest__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-outline {
+  outline: 1px solid @color-gray-3;
+  border: 0;
+  border-radius: 20px;
+  &:hover, &:focus {
+    outline: 1px solid @color-yellow-dark;
+  }
+  &:not(textarea) {
+    height: 40px;
+    padding: 0 16px;
+  }
+  &:required:focus:invalid {
+    outline: 1px solid @color-red-1;
+  }
+}
+
+textarea {
+  resize: none;
+  padding: 10px 16px;
+}
+
+.modal-sendrequest__footnotes {
+  margin-top: -16px;
+  font-size: 12px;
+}
+
+.file-upload {
+  display: block;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.modal-sendrequest__persdata {
+  margin-top: -8px;
+  font-size: 12px;
+  a {
+    text-decoration: underline;
+  }
+}

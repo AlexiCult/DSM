@@ -1,0 +1,53 @@
+@import (reference) './../../less/variables.less';
+
+.films-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 0 120px;
+  @media screen and (max-width: 992px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.films__image-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
+}
+
+.films__image {
+  z-index: 1;
+}
+
+.films__image-rect {
+  position: absolute;
+  top: 54px;
+  right: -28px;
+  z-index: 0;
+  width: 344px;
+  height: 284px;
+  background: @color-white;
+  border: 6px solid @color-yellow-dark;
+}
+
+.films__text {
+  margin-bottom: 14px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
+
+.films__link {
+  text-decoration: underline;
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,50 @@
+@import (reference) './../../less/variables.less';
+
+.size-type {
+  position: relative;
+  background: no-repeat center/cover url(./size-type__bg.png);
+  background-attachment: fixed;
+  color: @color-white;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: @color-gray-1-70;
+  }
+}
+
+.size-type-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 120px;
+  @media screen and (max-width: 992px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.size-type__table-link {
+  display: block;
+  margin-bottom: 24px;
+  text-decoration: underline;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+}
+
+.size-type__sign {
+  margin-top: -144px;
+  margin-bottom: -88px;
+  transform: rotate3d(0, 1, 0, 90deg);
+  opacity: 0.3;
+  @media screen and (max-width: 1240px) {
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+@import (reference) './../../less/variables.less';
+
+.advantages {
+  padding-bottom: 66px;
+  background-color: @color-white;
+}
+
+.advantages__items {
+  position: relative;
+  margin-top: 32px;
+  &::after {
+    content: "Преимущества";
+    color: @color-gray-3;
+    opacity: 0.1;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 100px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 8px);
+  }
+  @media screen and (max-width: 575px) {
+    margin-top: 26px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  position: relative;
+  height: 248px;
+  padding: 40px 24px 40px 48px;
+  margin-left: 48px;
+  margin-bottom: 24px;
+  background-color: @color-gray-5;
+  &:hover {
+    background-color: @color-yellow-dark;
+  }
+  @media screen and (max-width: 575px) {
+    height: auto;
+    margin-left: 0;
+    padding: 22px 24px 20px 72px;
+  }
+}
+
+.advantages__image {
+  position: absolute;
+  top: 40px;
+  left: -48px;
+  width: 72px;
+  height: 72px;
+  padding: 8px;
+  object-fit: contain;
+  background-color: @color-white;
+  outline: 6px solid @color-yellow-dark;
+  @media screen and (max-width: 575px) {
+    width: 56px;
+    height: 56px;
+    top: 24px;
+    left: 0;
+  }
+}
+
+.advantages__title {
+  @media screen and (max-width: 1240px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+.advantages__text {
+  margin-top: 15px;
+  line-height: 145%;
+  @media screen and (max-width: 1240px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
